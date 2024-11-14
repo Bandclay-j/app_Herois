@@ -60,6 +60,7 @@ function editaSuperHeroi(id) {
         document.getElementById("fraqueza").value = superHeroi.fraqueza;
         document.getElementById("historiaOrigem").value = superHeroi.historiaOrigem;
         document.getElementById("primeiraAparicao").value = superHeroi.primeiraAparicao;
+        document.getElementById("imagem").value = superHeroi.imagem;
 
         // Abre o modal
         const modal = new bootstrap.Modal(document.getElementById("editSuperHeroiModal"));
@@ -77,6 +78,7 @@ function salvarEdicaoSuperHeroi() {
     const fraqueza = document.getElementById("fraqueza").value;
     const historiaOrigem = document.getElementById("historiaOrigem").value;
     const primeiraAparicao = document.getElementById("primeiraAparicao").value;
+    const imagem = document.getElementById("imagem").value;
 
     // Cria o objeto com os dados atualizados
     const superHeroi = {
@@ -85,12 +87,14 @@ function salvarEdicaoSuperHeroi() {
         superPoder: superPoder,
         fraqueza: fraqueza,
         historiaOrigem: historiaOrigem,
-        primeiraAparicao: primeiraAparicao
+        primeiraAparicao: primeiraAparicao,
+        imagem: imagem
     };
 
     // Envia o objeto atualizado ao backend
     axios.put(`http://localhost:8080/superHeroi/${id}`, superHeroi)
     .then(function(response) {
+        console.log(response);
         //Fecha o modal
         const modal = bootstrap.Modal.getInstance(document.getElementById("editSuperHeroiModal"));
         modal.hide();

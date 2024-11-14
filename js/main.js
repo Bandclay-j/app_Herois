@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         herois.forEach((heroi, index) => {
             const activeClass = index === 0 ? "active" : "";
             const card = `
-                <div class="carousel-item ${activeClass} d-flex justify-content-center">
+                <div class="carousel-item ${activeClass} justify-content-center">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                         <img src="${heroi.imagem}" class="card-img-top" alt="Imagem de ${heroi.nome}">
