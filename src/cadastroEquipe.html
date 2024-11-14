@@ -9,9 +9,8 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="../img/logo.png" alt="Logo" width="50" class="d-inline-block align-text-top">
-                Super-Heróis
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" width="50" class="d-inline-block align-text-top"> Super-Heróis
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -19,14 +18,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="./cadastroHeroi.html">Cadastro de Heróis</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="./listaHeroi.html">Lista de Heróis</a>
                     </li>
+
                     <li class="nav-item">
                        <a class="nav-link" href="./cadastroEquipe.html">Cadastro de Equipe</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="./listaEquipe.html">Lista de Equipes</a>
                     </li>
@@ -35,8 +41,24 @@
         </div>
     </nav>
 
+    <div class="container-fluid mb-3">
+        <form>
+            <h1 class="text-center">Cadastro de Equipe</h1>
+
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome...">
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="cadastraEquipe()">Cadastrar</button>
+            <button type="button" class="btn btn-secondary">Voltar</button>
+        </form>
+
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/cadastroEquipe.js"></script>
 </body>
 </html>
